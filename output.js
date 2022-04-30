@@ -1,3 +1,3 @@
 function myFunction(){
-    alert(5+7);
+    window.alert(5+7); // execute before loaded
 }
