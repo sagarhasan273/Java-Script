@@ -1,11 +1,13 @@
-function display (num){
-    console.log("Result is",  num);
+const myNumbers = [4, 1, -20, -7, 5, 9, -6];
+
+const posNumbers = removeNegs(myNumbers, (x)=>x>=0);
+
+function removeNegs(arr, callback){
+    result = []
+    for(const x of arr){
+        if (callback(x)) result.push(x);
+    }
+    return result;
 }
 
-function myCallback(num1, num2, callback){
-    let sum = num1 + num2;
-    if (callback) callback(sum);
-    return sum;
-}
-
-let result = myCallback(5, 5);
+console.log(posNumbers);
